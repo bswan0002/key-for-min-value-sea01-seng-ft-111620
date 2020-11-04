@@ -3,8 +3,12 @@
 
 def key_for_min_value(name_hash)
 
-  lowVal = 999999
-  lowValKey = ""
+  if name_hash.to_a == []
+    return nil
+  else
+    lowVal = name_hash.to_a[0][1]
+    lowValKey = name_hash.to_a[0][0]
+  end
   
   if name_hash.empty?
     return nil
